@@ -35,14 +35,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MathNet.Numerics, Version=3.17.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MathNet.Numerics.3.17.0\lib\net40\MathNet.Numerics.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="nunit.framework, Version=2.6.3.13283, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\nunit.framework.2.63.0\lib\nunit.framework.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Numerics" />
@@ -78,7 +70,6 @@
     <Compile Include="XmlSerializableDummy.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
     <None Include="paket.references" />
   </ItemGroup>
   <ItemGroup>
@@ -111,7 +102,15 @@
         </Reference>
       </ItemGroup>
     </When>
-    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.0' Or $(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6' Or $(TargetFrameworkVersion) == 'v4.6.1' Or $(TargetFrameworkVersion) == 'v4.6.2' Or $(TargetFrameworkVersion) == 'v4.6.3')" />
+    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.0' Or $(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6' Or $(TargetFrameworkVersion) == 'v4.6.1' Or $(TargetFrameworkVersion) == 'v4.6.2' Or $(TargetFrameworkVersion) == 'v4.6.3')">
+      <ItemGroup>
+        <Reference Include="MathNet.Numerics">
+          <HintPath>..\..\packages\MathNet.Numerics\lib\net40\MathNet.Numerics.dll</HintPath>
+          <Private>True</Private>
+          <Paket>True</Paket>
+        </Reference>
+      </ItemGroup>
+    </When>
     <When Condition="($(TargetFrameworkProfile) == 'Profile5') Or ($(TargetFrameworkProfile) == 'Profile6') Or ($(TargetFrameworkProfile) == 'Profile14') Or ($(TargetFrameworkProfile) == 'Profile19') Or ($(TargetFrameworkProfile) == 'Profile37') Or ($(TargetFrameworkProfile) == 'Profile42') Or ($(TargetFrameworkProfile) == 'Profile92') Or ($(TargetFrameworkProfile) == 'Profile102') Or ($(TargetFrameworkProfile) == 'Profile136') Or ($(TargetFrameworkProfile) == 'Profile147') Or ($(TargetFrameworkProfile) == 'Profile158') Or ($(TargetFrameworkProfile) == 'Profile225') Or ($(TargetFrameworkProfile) == 'Profile240') Or ($(TargetFrameworkProfile) == 'Profile255') Or ($(TargetFrameworkProfile) == 'Profile328') Or ($(TargetFrameworkProfile) == 'Profile336') Or ($(TargetFrameworkProfile) == 'Profile344')">
       <ItemGroup>
         <Reference Include="MathNet.Numerics">
@@ -193,7 +192,15 @@
         </Reference>
       </ItemGroup>
     </When>
-    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And $(TargetFrameworkVersion) == 'v4.0'" />
+    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And $(TargetFrameworkVersion) == 'v4.0'">
+      <ItemGroup>
+        <Reference Include="nunit.framework">
+          <HintPath>..\..\packages\test\NUnit\lib\net40\nunit.framework.dll</HintPath>
+          <Private>True</Private>
+          <Paket>True</Paket>
+        </Reference>
+      </ItemGroup>
+    </When>
     <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6' Or $(TargetFrameworkVersion) == 'v4.6.1' Or $(TargetFrameworkVersion) == 'v4.6.2' Or $(TargetFrameworkVersion) == 'v4.6.3')">
       <ItemGroup>
         <Reference Include="nunit.framework">
