@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MathNet.Spatial</RootNamespace>
-    <AssemblyName>MathNet.Spatial</AssemblyName>
+    <AssemblyName>Akomi.MathNet.Spatial</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -17,7 +17,7 @@
     <OutputPath>..\..\out\lib\Net40\</OutputPath>
     <IntermediateOutputPath>..\..\obj\lib\Net40\</IntermediateOutputPath>
     <BaseIntermediateOutputPath>..\..\obj\lib\Net40\</BaseIntermediateOutputPath>
-    <DocumentationFile>..\..\out\lib\Net40\MathNet.Spatial.xml</DocumentationFile>
+    <DocumentationFile>..\..\out\lib\Net40\Akomi.MathNet.Spatial.xml</DocumentationFile>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <DefineConstants>TRACE</DefineConstants>
