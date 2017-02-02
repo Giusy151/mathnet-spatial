@@ -55,7 +55,7 @@ let libpcl259 = "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1"
 let libpcl328 = "lib/portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1"
 
 let spatialPack =
-    { Id = "MathNet.Spatial"
+    { Id = "Akomi.MathNet.Spatial"
       Release = spatialRelease
       Title = "Math.NET Spatial"
       Summary = summary
@@ -67,7 +67,7 @@ let spatialPack =
         [ { FrameworkVersion=""
             Dependencies=[ "MathNet.Numerics", GetPackageVersion "packages" "MathNet.Numerics" ] } ]
       Files =
-        [ @"..\..\out\lib\Net40\MathNet.Spatial.*", Some libnet40, None;
+        [ @"..\..\out\lib\Net40\Akomi.MathNet.Spatial.*", Some libnet40, None;
           @"..\..\src\Spatial\**\*.cs", Some "src/Common", None ] }
 
 let coreBundle =
@@ -104,7 +104,7 @@ Target "Prepare" DoNothing
 // BUILD
 // --------------------------------------------------------------------------------------
 
-Target "BuildMain" (fun _ -> build !! "MathNet.Spatial.sln")
+Target "BuildMain" (fun _ -> build !! "Akomi.MathNet.Spatial.sln")
 Target "BuildAll" (fun _ -> build !! "MathNet.Spatial.All.sln")
 
 Target "Build" DoNothing
@@ -189,7 +189,7 @@ Target "DocsWatch" (fun _ ->
 Target "CleanApi" (fun _ -> CleanDirs ["out/api"])
 
 Target "Api" (fun _ ->
-    !! "out/lib/Net40/MathNet.Spatial.dll"
+    !! "out/lib/Net40/Akomi.MathNet.Spatial.dll"
     |> Docu (fun p ->
         { p with
             ToolPath = "tools/docu/docu.exe"
